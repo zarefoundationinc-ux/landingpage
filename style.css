@@ -80,3 +80,17 @@ footer {
   font-size: 0.85rem;
   opacity: 0.6;
 }
+
+
+.hidden {
+  display: none;
+}
+
+.success {
+  margin: 2rem 0;
+  animation: fade 1.5s ease forwards;
+}
+
+.success h3 {
+  margin-bottom: 0.25rem;
+}
