@@ -38,7 +38,7 @@ form.onsubmit = async (e) => {
     form.classList.add("hidden");
     success.classList.remove("hidden");
   } catch {
-    alert(JSON.stringify(data));
+    status.textContent = "Something went wrong. Please try again.";
 
   }
 };
