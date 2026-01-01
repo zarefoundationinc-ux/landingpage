@@ -1,6 +1,7 @@
 // Dark mode
 const toggle = document.getElementById("themeToggle");
 const body = document.body;
+console.log("Theme toggle JS loaded");
 
 if (localStorage.theme === "dark") {
   body.classList.add("dark");
