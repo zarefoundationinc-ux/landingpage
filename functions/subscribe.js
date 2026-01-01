@@ -5,16 +5,14 @@ export async function onRequestPost({ request, env }) {
     if (!email || !email.includes("@")) {
       return new Response(
         JSON.stringify({ error: "Invalid email" }),
-        { status: 400 }
+        { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
 
-    export async function onRequestPost({ request, env }) {
-  await env.zare_emails.prepare(
-    "INSERT INTO zare_emails (email) VALUES (?)"
-  ).bind(email).run();
-}
-
+    await env.zare_emails
+      .prepare("INSERT INTO zare_emails (email) VALUES (?)")
+      .bind(email)
+      .run();
 
     return new Response(
       JSON.stringify({ success: true }),
@@ -24,7 +22,7 @@ export async function onRequestPost({ request, env }) {
   } catch (err) {
     return new Response(
       JSON.stringify({ error: err.message }),
-      { status: 500 }
+      { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
 }
