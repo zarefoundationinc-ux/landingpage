@@ -7,55 +7,79 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container fade-in">
-    <img src="assets/logo.png" class="logo breathe" alt="Zare Foundation Logo" />
 
-    <h1>Something Peaceful<br>Is Brewing</h1>
+  <main class="container fade-in">
+
+    <img
+      src="assets/logo.png"
+      alt="Zare Foundation Logo"
+      class="logo breathe"
+    />
+
+    <h1>
+      Something Peaceful<br />
+      Is Brewing
+    </h1>
 
     <p class="subtitle">
-      Our website is meditating. <em>Breathe…</em><br>
+      Our website is meditating. <em>Breathe…</em><br />
       <span>We'll be with you shortly.</span>
     </p>
 
-    <form id="emailForm" class="signup">
-      <div id="signup-wrapper">
+    <div id="signup-wrapper">
 
-  <form id="emailForm" class="signup">
-    <input
-      type="email"
-      id="email"
-      placeholder="Enter your email"
-      required
-    />
-    <input
-      type="text"
-      name="company"
-      tabindex="-1"
-      autocomplete="off"
-      class="honeypot"
-    />
-    <button type="submit">Notify Me</button>
-  </form>
+      <form id="emailForm" class="signup">
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
 
-  <div id="successMessage" class="success hidden">
-    <h3>You're on the list!</h3>
-    <p>We'll notify you when we launch.</p>
-  </div>
+        <!-- Honeypot (spam protection) -->
+        <input
+          type="text"
+          name="company"
+          tabindex="-1"
+          autocomplete="off"
+          class="honeypot"
+        />
 
-</div>
+        <button type="submit">Notify Me</button>
+      </form>
 
-    </form>
+      <div id="successMessage" class="success hidden">
+        <h3>You're on the list!</h3>
+        <p>We'll notify you when we launch.</p>
+      </div>
 
-    <p id="status"></p>
+      <p id="status" class="status"></p>
+    </div>
 
-    <p class="tagline">Nurturing peace, one breath at a time.</p>
-    <p class="topics">Breathwork · Meditation · Wisdom</p>
+    <p class="tagline">
+      Nurturing peace, one breath at a time.
+    </p>
 
-    <a href="https://www.instagram.com/zare.foundation" target="_blank" class="instagram">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg">
+    <p class="topics">
+      Breathwork · Meditation · Wisdom
+    </p>
+
+    <a
+      href="https://www.instagram.com/zare.foundation"
+      target="_blank"
+      class="instagram"
+      aria-label="Instagram"
+    >
+      <img
+        src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg"
+        alt="Instagram"
+      />
     </a>
 
-    <footer>© 2025 Zare Foundation. All rights reserved.</footer>
+    <footer>
+      © 2025 Zare Foundation. All rights reserved.
+    </footer>
+
   </main>
 
   <script src="script.js"></script>
