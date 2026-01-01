@@ -1,24 +1,45 @@
+const form = document.getElementById("emailForm");
+const status = document.getElementById("status");
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const email = document.getElementById("email").value;
+  const emailInput = document.getElementById("email");
+  const email = emailInput.value.trim();
   const trap = document.querySelector(".honeypot").value;
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    status.textContent = "Please enter a valid email.";
+  // Honeypot spam protection
+  if (trap) {
     return;
   }
 
-  const res = await fetch("/signup", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, trap })
-  });
+  // Email validation
+  const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!validEmail) {
+    status.textContent = "Please enter a valid email address.";
+    return;
+  }
 
-  if (res.ok) {
-    status.textContent = "✨ You're on the list. Thank you.";
-    form.reset();
-  } else {
-    status.textContent = "Something went wrong. Try again.";
+  try {
+    const res = await fetch("/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, trap })
+    });
+
+    if (!res.ok) {
+      throw new Error("Network error");
+    }
+
+    // Remove form and show success message
+    document.getElementById("emailForm").remove();
+
+    const success = document.getElementById("successMessage");
+    success.classList.remove("hidden");
+
+  } catch (err) {
+    status.textContent = "Something went wrong. Please try again later.";
   }
 });
