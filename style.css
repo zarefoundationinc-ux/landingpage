@@ -18,25 +18,13 @@ body {
   transition:background .5s,color .5s;
 }
 
-/* Dark mode toggle */
-#themeToggle {
-  position:fixed;
-  top:16px;
-  right:16px;
-  border:none;
-  padding:10px 14px;
-  border-radius:999px;
-  background:var(--accent);
-  color:white;
-  cursor:pointer;
-}
 
 /* Layout */
 .container {
   max-width:720px;
-  min-height:100vh;
+  min-height:80vh;
   margin:auto;
-  padding:3rem 1.5rem;
+  padding:2rem 1.5rem;
   text-align:center;
   display:flex;
   flex-direction:column;
@@ -44,7 +32,7 @@ body {
 }
 
 .logo {
-  width:140px;
+  width:180px;
   margin-bottom:1.5rem;
 }
 
@@ -107,10 +95,11 @@ button {
 }
 
 footer {
-  margin-top:auto;
-  font-size:.85rem;
-  opacity:.7;
+  margin-top: 10px; 
+  font-size: 0.85rem;
+  opacity: 0.7;
 }
+
 
 .honeypot {
   display:none;
