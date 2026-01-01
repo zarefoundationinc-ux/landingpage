@@ -1,3 +1,23 @@
+// Dark mode toggle
+const toggle = document.getElementById("themeToggle");
+const body = document.body;
+
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+  toggle.textContent = "☀️";
+}
+
+toggle.addEventListener("click", () => {
+  body.classList.toggle("dark");
+
+  const dark = body.classList.contains("dark");
+  toggle.textContent = dark ? "☀️" : "🌙";
+  localStorage.setItem("theme", dark ? "dark" : "light");
+});
+
+
+
+
 const form = document.getElementById("emailForm");
 const status = document.getElementById("status");
 
