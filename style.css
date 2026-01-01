@@ -1,0 +1,122 @@
+/* Theme variables */
+:root {
+  --bg:#f6f2ea;
+  --text:#355e6b;
+  --accent:#2f5966;
+}
+body.dark {
+  --bg:#0f1a1d;
+  --text:#e3eff2;
+  --accent:#6fb7c6;
+}
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Georgia,serif;
+  transition:background .5s,color .5s;
+}
+
+/* Dark mode toggle */
+#themeToggle {
+  position:fixed;
+  top:16px;
+  right:16px;
+  border:none;
+  padding:10px 14px;
+  border-radius:999px;
+  background:var(--accent);
+  color:white;
+  cursor:pointer;
+}
+
+/* Layout */
+.container {
+  max-width:720px;
+  min-height:100vh;
+  margin:auto;
+  padding:3rem 1.5rem;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.logo {
+  width:140px;
+  margin-bottom:1.5rem;
+}
+
+h1 {
+  font-size:3rem;
+}
+
+.subtitle {
+  margin-bottom:2rem;
+}
+
+/* Signup */
+#emailForm {
+  display:flex;
+  gap:.5rem;
+}
+
+input {
+  padding:.75rem 1rem;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+button {
+  padding:.75rem 1.25rem;
+  border:none;
+  border-radius:8px;
+  background:var(--accent);
+  color:white;
+  cursor:pointer;
+}
+
+.hidden {
+  display:none;
+}
+
+#success {
+  margin-top:1.5rem;
+  animation:fade 1s ease forwards;
+}
+
+/* Animations */
+.breathe {
+  animation:breathe 6s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+}
+
+@keyframes fade {
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Footer & links */
+.instagram img {
+  width:36px;
+}
+
+footer {
+  margin-top:auto;
+  font-size:.85rem;
+  opacity:.7;
+}
+
+.honeypot {
+  display:none;
+}
+
+@media(max-width:600px){
+  h1{font-size:2.2rem}
+  #emailForm{flex-direction:column}
+}
