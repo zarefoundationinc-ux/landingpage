@@ -9,9 +9,12 @@ export async function onRequestPost({ request, env }) {
       );
     }
 
-    await env.DB.prepare(
-      "INSERT INTO zare_emails (email) VALUES (?)"
-    ).bind(email).run();
+    export async function onRequestPost({ request, env }) {
+  await env.zare_emails.prepare(
+    "INSERT INTO zare_emails (email) VALUES (?)"
+  ).bind(email).run();
+}
+
 
     return new Response(
       JSON.stringify({ success: true }),
