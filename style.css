@@ -10,6 +10,29 @@ body.dark {
   --accent:#6fb7c6;
 }
 
+.donation-progress {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 24px;
+  margin: 10px 0;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 70%;   /* Example 7k of 10k = 70% */
+  background: #4caf50;
+  transition: width 1s ease-in-out;
+}
+
+
+
 body {
   margin:0;
   background:var(--bg);
