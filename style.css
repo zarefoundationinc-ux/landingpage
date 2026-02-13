@@ -184,6 +184,7 @@ body {
   font-size: 0.98rem;
   opacity: 0.75;
   color: var(--muted);
+  text-align: center;
 }
 
 .instagram {
@@ -191,6 +192,7 @@ body {
   margin-top: 18px;
   opacity: 0.75;
   transition: 0.2s ease;
+  text-align: center;
 }
 
 .instagram:hover {
