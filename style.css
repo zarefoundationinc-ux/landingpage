@@ -84,7 +84,7 @@ body {
 /* Donate button */
 .donation-section {
   width: 100%;
-  text-align: left;
+  text-align: center;
   margin: 10px 0 24px;
 }
 
@@ -169,6 +169,7 @@ body {
 .breathe-text{
   display: inline-block;
   animation: breatheFloat 6.5s ease-in-out infinite;
+  text-align: center;
 }
 
 @keyframes breatheFloat {
