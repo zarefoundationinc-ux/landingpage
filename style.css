@@ -244,3 +244,10 @@ footer {
     gap: 14px;
   }
 }
+.emoji-confetti {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  will-change: transform, opacity;
+}
+
