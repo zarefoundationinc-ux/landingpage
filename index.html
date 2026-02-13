@@ -4,27 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zare Foundation</title>
-  <link rel="stylesheet" href="./style.css?v=1.0.6">
+
+  <link rel="stylesheet" href="./style.css?v=1.0.8">
+
+  <!-- Zeffy popup embed script -->
   <script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js"></script>
-
-
 </head>
+
 <body>
-
-
 <main class="container">
+
   <img src="assets/logo.png" class="logo breathe" alt="Zare Foundation logo" />
 
-  <h1>
   <p class="brewing">
-  Something Peaceful <br> is brewing...
-  <span class="coffee-icon" aria-hidden="true">
-    ☕
-  </span>
-</p> </h1>
+    Something Peaceful <br> is brewing...
+    <span class="coffee-icon" aria-hidden="true">☕</span>
+  </p>
 
-<section class="projects-section">
-  <div class="projects-list">
+  <!-- Projects (clean, left aligned, same font, no underline unless hover) -->
+  <section class="projects-section">
     <a class="project-link" href="https://zarefoundation.ai/">
       Project SKY — Learn a 3 day mind & wellness workshop online with a private coach !
     </a>
@@ -40,57 +38,36 @@
     <a class="project-link" href="https://zarefoundation.ai/">
       Project Tattva — A journey through stories, podcasts and blogs — showcasing insights from voices across the world.
     </a>
-  </div>
-</section>
+  </section>
 
+  <!-- Donate button (Zeffy popup modal) -->
+  <section class="donation-section">
+    <a
+      class="donate-button"
+      href="https://www.zeffy.com/embed/donation-form/donate-to-make-a-difference-2471?modal=true"
+      data-zeffy-form-link
+    >
+      Donate
+    </a>
+  </section>
 
+  <!-- Fundraising Goal Progress -->
+  <section id="fundraiser-goal" class="donation-progress">
+    <h2>Fundraising Goal</h2>
 
+    <div class="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
 
-<section class="donation-section">
-  <div class="donation-title">Donate</div>
+    <!-- Change values here only -->
+    <p id="progress-text" data-raised="7000" data-goal="10000"></p>
+  </section>
 
-  <div class="zeffy-embed">
-    <iframe
-      src="https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-2471"
-      title="Zeffy Donation Form"
-      loading="lazy"
-      frameborder="0"
-      scrolling="no"
-    ></iframe>
-  </div>
-</section>
-
-<!-- 
-
-<section id="fundraiser-goal" class="donation-progress">
-  <h2>Fundraising Goal</h2>
-  <div class="progress-bar-container">
-    <div id="progress-bar"></div>
-  </div>
-  <p id="progress-text">$7,000 raised of $50,000 goal</p>
-</section>
- -->
-<section id="fundraiser-goal" class="donation-progress">
-  <h2>Fundraising Goal</h2>
-
-  <div class="progress-bar-container">
-    <div id="progress-bar"></div>
-  </div>
-
-  <!-- You only edit these two numbers -->
-  <p id="progress-text"
-     data-raised="7800"
-     data-goal="25000">
-  </p>
-</section>
-
-  
   <p class="subtitle">
     Our website is meditating. <em>Breathe…</em><br>
     We'll be with you shortly.
   </p>
 
-  
   <p class="topics">Breathwork · Meditation · Wisdom</p>
 
   <a href="https://www.instagram.com/zare.foundation" target="_blank" class="instagram">
@@ -98,9 +75,9 @@
   </a>
 
   <footer>© 2025 Zare Foundation. All rights reserved.</footer>
+
 </main>
 
-<script src="./script.js?v=1.0.6"></script>
-
+<script src="./script.js?v=1.0.8"></script>
 </body>
 </html>
