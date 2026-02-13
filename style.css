@@ -158,5 +158,72 @@ footer {
   }
 }
 
+/* Projects List */
+.projects-section {
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects-list li {
+  margin-bottom: 1rem;
+}
+
+.projects-list a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #222;
+  padding: 0.6rem 1rem;
+  display: block;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.projects-list a:hover {
+  background: #f7f7f7;
+  border-color: #bbb;
+}
+
+/* Optional emphasis on project titles */
+.project-title {
+  font-weight: 700;
+  color: #000;
+}
+
+/* Donation Section */
+.donation-section {
+  margin: 2rem 0 3rem;
+  text-align: center;
+}
+
+.donation-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.zeffy-wrapper {
+  max-width: 480px; /* form width */
+  margin: 0 auto;
+}
+
+
 
 
