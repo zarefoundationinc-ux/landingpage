@@ -37,39 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bar.style.width = percent + "%";
   }
 
-  // -----------------------------------------
-  // Emoji confetti 🎉✨🌟
-  // -----------------------------------------
-  const confettiLayer = document.querySelector(".confetti-layer");
-  if (confettiLayer) {
-    const emojis = ["🎉","✨","🌟"];
-    const count = 15; // number of emojis
-
-    for (let i = 0; i < count; i++) {
-      const emoji = document.createElement("div");
-      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-      emoji.className = "emoji-confetti";
-
-      // random horizontal position
-      emoji.style.left = Math.random() * 100 + "%";
-      emoji.style.top = "80%"; // start near the progress bar
-      emoji.style.fontSize = (18 + Math.random() * 10) + "px";
-      emoji.style.opacity = Math.random() * 0.8 + 0.5;
-
-      confettiLayer.appendChild(emoji);
-
-      // Animate it floating up and fading
-      const duration = 2000 + Math.random() * 1500;
-      emoji.animate([
-        { transform: `translateY(0px)`, opacity: emoji.style.opacity },
-        { transform: `translateY(-80px) rotate(${Math.random()*360}deg)`, opacity: 0 }
-      ], {
-        duration: duration,
-        easing: "ease-out",
-        iterations: Infinity,
-        delay: Math.random() * 1000
-      });
-    }
+  
   }
 });
 
